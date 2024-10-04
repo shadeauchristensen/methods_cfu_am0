@@ -39,7 +39,8 @@
 first_name = "Jeff"
 puts first_name.start_with?("J")
 
-
+second_name = "Shadeau"
+puts second_name.upcase
 
 # SECTION 3: Calling methods on variables assigned to integers.
 # Declare 2 variables assigned to integer objects.
@@ -47,10 +48,34 @@ puts first_name.start_with?("J")
 # https://ruby-doc.org/core-3.1.0/Integer.html
 # Include comments above each method call explaining the impact and return value of that method.
 
-
+def check_sign(number)
+    if number > 0
+      puts "Positive"
+    elsif number < 0
+      puts "Negative"
+    else
+      puts "Zero"
+    end
+  end
+  
+  check_sign(6)   
+  # Outputs: Positive
+  check_sign(-6)  
+  # Outputs: Negative
+  check_sign(0)   
+  # Outputs: Zero
 
 # SECTION 4: Calling methods on variables assigned to arrays.
 # Declare 2 variables assigned to arrays.
 # Call a different built-in Ruby method on each of your variables. 
 # https://ruby-doc.org/core-3.1.0/Array.html
 # Include comments above each method call explaining the impact and return value of that method.
+
+numbers = [1, 2, 3, 4, 5]
+animals = ["wildebeast", "tiger", "monkey"]
+
+reversed_numbers = numbers.reverse
+puts "Reversed numbers: #{reversed_numbers}"
+
+sorted_animals = animals.sort
+puts "Sorted animals: #{sorted_animals}"
